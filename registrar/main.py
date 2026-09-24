@@ -1,11 +1,8 @@
 from typing import Dict, Callable, TypeVar, Any, List, Optional, Union
-try:
-    from my_id import MyID as get_uid
-except ImportError:
-    import uuid
-    get_uid = uuid.uuid4
+from my_id import MyID
     
 T = TypeVar('T')
+
 
 class Registrar:
     '''
@@ -38,13 +35,13 @@ class Registrar:
         # Если вызвано без скобок: @register
         if callable(uid):
             func = uid
-            actual_uid = get_uid()
+            actual_uid = MyID()
             self._function_pool[actual_uid] = func
             return func
         
         # Если вызвано со скобками: @register() или @register("my_uid")
         def decorator(func: T) -> T:
-            actual_uid = uid or get_uid()
+            actual_uid = uid or MyID()
             self._function_pool[actual_uid] = func
             return func
         return decorator
