@@ -16,7 +16,7 @@
 ## Установка
 ### Установка из репозитория (требуется Git)
 ```bash
-pip install git+https://github.com/Sam-Strand/registrar_py.git
+pip install git+https://github.com/Sam-Strand-org/registrar_py.git
 ```
 
 ## Быстрый старт

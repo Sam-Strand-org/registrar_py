@@ -19,4 +19,4 @@ my_id = [
 ]
 
 [project.urls]
-Homepage = 'https://github.com/Sam-Strand/registrar_py'
+Homepage = 'https://github.com/Sam-Strand-org/registrar_py'
